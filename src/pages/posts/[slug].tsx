@@ -164,7 +164,8 @@ export default function Post({ post }: PostProps) {
 
               [&_p]:text-base [&_p]:mb-4 [&_p]:leading-relaxed
               [&_a]:transition-colors [&_a]:duration-300
-              [&_strong]:font-semibold
+              [&_strong]:font-semibold [&_strong]:text-[var(--accent-gold)]
+              [&_b]:text-[var(--accent-gold)]
               [&_em]:italic
               [&_blockquote]:border-l-4 [&_blockquote]:pl-4 [&_blockquote]:py-2 [&_blockquote]:italic [&_blockquote]:my-6
               [&_blockquote_p]:mb-0
@@ -191,7 +192,7 @@ export default function Post({ post }: PostProps) {
                 "--heading-color": "var(--text-primary)",
                 "--link-color": "var(--accent-gold)",
                 "--link-hover-color": "var(--accent-gold-dark)",
-                "--strong-color": "var(--text-primary)",
+                "--strong-color": "var(--accent-gold)",
                 "--code-bg": "transparent",
                 "--code-color": "var(--accent-gold)",
                 "--pre-bg": "#000000",
