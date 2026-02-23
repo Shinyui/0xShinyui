@@ -22,7 +22,11 @@ type HomeProps = {
 
 export default function Home({ posts, tags }: HomeProps) {
   return (
-    <Layout title="首頁 - 0xShinyui" description="分享產品管理、技術開發、運營經驗">
+    <Layout
+      title="首頁 - 0xShinyui"
+      description="分享產品管理、技術開發、運營經驗"
+      canonical="/"
+    >
       <h1
         className="text-2xl sm:text-3xl font-bold mb-8"
         style={{ color: 'var(--text-primary)' }}

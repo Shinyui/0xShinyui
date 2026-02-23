@@ -16,6 +16,7 @@ export default function IpPage({ ip, userAgent, timestamp }: IpPageProps) {
     <Layout
       title="IP 地址查詢 - 0xShinyui"
       description="查詢您的公網 IP 地址和瀏覽器資訊"
+      canonical="/ip"
     >
       <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1

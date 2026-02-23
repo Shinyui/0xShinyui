@@ -1,6 +1,8 @@
 import { getPostBySlug, getPostSlugs } from '@/lib/hygraph';
 import Layout from '@/components/layout/Layout';
 import TableOfContents from '@/components/post/TableOfContents';
+import { ArticleJsonLd } from '@/components/seo/JsonLd';
+import { siteConfig } from '@/lib/siteConfig';
 import { remark } from 'remark';
 import remarkGfm from 'remark-gfm';
 import remarkRehype from 'remark-rehype';
@@ -14,6 +16,7 @@ type TocItem = { slug: string; content: string; lvl: number };
 
 type PostProps = {
   post: {
+    slug: string;
     title: string;
     date: string;
     excerpt: string;
@@ -24,8 +27,29 @@ type PostProps = {
 };
 
 export default function Post({ post }: PostProps) {
+  const postUrl = `${siteConfig.siteUrl}/posts/${post.slug}`;
+
   return (
-    <Layout title={`${post.title} - 0xShinyui`} description={post.excerpt}>
+    <Layout
+      title={post.title}
+      description={post.excerpt}
+      canonical={`/posts/${post.slug}`}
+      ogImage={post.coverImage || undefined}
+      article={{
+        publishedTime: post.date,
+        modifiedTime: post.date,
+        authors: ['0xShinyui'],
+      }}
+    >
+      <ArticleJsonLd
+        title={post.title}
+        description={post.excerpt}
+        url={postUrl}
+        datePublished={post.date}
+        dateModified={post.date}
+        author="0xShinyui"
+        image={post.coverImage || undefined}
+      />
       {/* 封面 + 基本資料 */}
       <div className="mx-auto mb-12">
         {post.coverImage && (
@@ -158,6 +182,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     return {
       props: {
         post: {
+          slug: params!.slug as string,
           title: postData.title,
           date: postData.date,
           excerpt: postData.excerpt,

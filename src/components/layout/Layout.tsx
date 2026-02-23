@@ -1,27 +1,32 @@
 import { ReactNode } from 'react';
-import Head from 'next/head';
 import { Analytics } from '@vercel/analytics/next';
 import Header from './Header';
 import Footer from './Footer';
+import SEO, { SEOProps } from '@/components/seo/SEO';
+import { WebSiteJsonLd } from '@/components/seo/JsonLd';
 
-interface LayoutProps {
+interface LayoutProps extends SEOProps {
   children: ReactNode;
-  title?: string;
-  description?: string;
 }
 
 export default function Layout({
   children,
-  title = '0xShinyui - 技術部落格',
-  description = '分享產品管理、技術開發、運營經驗的部落格',
+  title,
+  description,
+  canonical,
+  ogImage,
+  article,
 }: LayoutProps) {
   return (
     <>
-      <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
+      <SEO
+        title={title}
+        description={description}
+        canonical={canonical}
+        ogImage={ogImage}
+        article={article}
+      />
+      <WebSiteJsonLd />
 
       <div
         className="min-h-screen flex flex-col"

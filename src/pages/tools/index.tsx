@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import Head from 'next/head';
 import Layout from '@/components/layout/Layout';
 import FeatureCard from '@/components/FeatureCard';
 
@@ -26,12 +25,11 @@ const ToolsPage = () => {
   ];
 
   return (
-    <Layout>
-      <Head>
-        <title>工具總覽 - 0xshinyui.xyz</title>
-        <meta name="description" content="實用工具集合，包含 IP 查詢和 2FA 驗證碼生成器等便民工具" />
-        <meta name="keywords" content="工具,IP查詢,2FA,驗證碼,實用工具" />
-      </Head>
+    <Layout
+      title="工具總覽 - 0xShinyui"
+      description="實用工具集合，包含 IP 查詢和 2FA 驗證碼生成器等便民工具"
+      canonical="/tools"
+    >
 
       <div className="min-h-screen py-12">
         <div className="max-w-6xl mx-auto px-4">

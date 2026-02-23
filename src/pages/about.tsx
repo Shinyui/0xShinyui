@@ -6,6 +6,7 @@ export default function Profile() {
     <Layout
       title="關於我 - 0xShinyui"
       description="認識 0xShinyui - 產品經理、技術愛好者"
+      canonical="/about"
     >
       <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1

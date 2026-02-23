@@ -46,6 +46,7 @@ export default function CategoryPage({
     <Layout
       title={`${categoryName} - 0xShinyui`}
       description={`瀏覽 ${categoryName} 分類下的文章`}
+      canonical={`/category/${category}`}
     >
       <h1
         className="text-2xl sm:text-3xl font-bold mb-4"

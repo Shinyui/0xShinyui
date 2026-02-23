@@ -16,6 +16,7 @@ export default function TwoFAPage() {
     <Layout
       title="2FA 驗證碼生成器 - 0xShinyui"
       description="安全的雙因素驗證碼生成工具"
+      canonical="/2fa"
     >
       <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1
