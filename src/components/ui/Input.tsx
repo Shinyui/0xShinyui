@@ -23,6 +23,7 @@ export default function Input({
           style={{ color: 'var(--text-primary)' }}
         >
           {label}
+          {props.required && <span className="text-red-500 ml-1">*</span>}
         </label>
       )}
       <input
