@@ -114,6 +114,36 @@ export const shopCategories: ProductCategory[] = [
           '合約部署 & NFT 鑿造',
         ],
       },
+      {
+        id: 'bitbrowser-automation',
+        title: 'BitBrowser Automation',
+        description:
+          '透過 BitBrowser 本地 API 與 Playwright 自動化批量開啟瀏覽器視窗、導航至目標網頁，提取 Cookies、localStorage 與 sessionStorage 等資料。支援序號範圍篩選與批次並行處理。',
+        price: '聯絡報價',
+        icon: '🌐',
+        color: '#6366f1',
+        features: [
+          'BitBrowser API 整合',
+          '批量瀏覽器操控',
+          'Cookies & Storage 提取',
+          '批次並行處理',
+        ],
+      },
+      {
+        id: 'simplechain-checkin',
+        title: 'SimpleChain Auto Check-in',
+        description:
+          'SimpleChain 任務平台自動化工具，批量處理以太坊錢包帳號，自動完成 nonce 取得、錢包簽名、登入認證與每日簽到。支援 SOCKS5/HTTP 代理與瀏覽器指紋。',
+        price: '聯絡報價',
+        icon: '🔗',
+        color: '#14b8a6',
+        features: [
+          '多帳號批量執行',
+          '錢包簽名自動化',
+          '每日簽到自動完成',
+          '代理 & 指紋支援',
+        ],
+      },
     ],
   },
   {
