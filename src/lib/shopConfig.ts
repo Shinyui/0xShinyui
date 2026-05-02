@@ -130,6 +130,21 @@ export const shopCategories: ProductCategory[] = [
         ],
       },
       {
+        id: 'dachain-testnet',
+        title: 'DaChain Testnet Bot',
+        description:
+          'DaChain 測試網自動化工具，支援 Inception Faucet 水龍頭領取（CSRF/Session Cookie 認證）與鏈上 EVM 轉帳（原始 RPC 呼叫構建、簽名並廣播交易）。基於 ethers v6 助記詞派生錢包，支援 SOCKS5 代理與瀏覽器指紋偽裝。',
+        price: '聯絡報價',
+        icon: '⛓️',
+        color: '#a855f7',
+        features: [
+          '水龍頭自動領取',
+          '鏈上 EVM 轉帳',
+          'SOCKS5 代理支援',
+          '瀏覽器指紋偽裝',
+        ],
+      },
+      {
         id: 'simplechain-checkin',
         title: 'SimpleChain Auto Check-in',
         description:
